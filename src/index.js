@@ -37,12 +37,12 @@ function onInputCountry() {
             }
             if (data.length <= 10) {
                 const searchList = data.map(country => onCountryList(country));
-                listEl.innerHTML = searchList.join('')
+                listEl.innerHTML = searchList.join('');
                 countryInfoEl.innerHTML = '';
             }
             if (data.length === 1) {
-                const listEl = data.map(country => onCountryCard(country));
-                countryInfoEl.innerHTML = listEl.join('')
+                const mark = data.map(country => onCountryСard(country));
+                countryInfoEl.innerHTML = mark.join('');
                 listEl.innerHTML = '';
             }
         })
@@ -52,32 +52,4 @@ function onInputCountry() {
             listEl.innerHTML = '';
             return error;
         })
-};
-//   searchCountries(searchQuery)
-//     .then(data => {
-//       if (data.length > 10) {
-//         Notify.success('Too many matches found. Please enter a more specific name.');
-//         countryInfoEl.innerHTML = '';
-//         listEl.innerHTML = '';
-//         return;
-//       }
-
-//       if (data.length <= 10) {
-//         const listMarkup = data.map(country => onCountryList(country));
-//         listEl.innerHTML = listMarkup.join('');
-//         countryInfoEl.innerHTML = '';
-//       }
-
-//       if (data.length === 1) {
-//         const markup = data.map(country => onCountryСard(country));
-//         countryInfoEl.innerHTML = markup.join('');
-//         listEl.innerHTML = '';
-//       }
-//     })
-//     .catch(error => {
-//       Notify.failure('Oops, there is no country with that name');
-//       countryInfoEl.innerHTML = '';
-//       listEl.innerHTML = '';
-//       return error;
-//     });
-// }
+}
